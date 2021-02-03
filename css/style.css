@@ -1,0 +1,442 @@
+body{overflow-x: hidden}
+hr{
+    border: 2px solid #149ddd;
+    width: 5%;
+    margin:0;
+}
+.b-all h3{
+    color: #173b6c;
+    font-size: 32px;
+    margin-bottom: 15px
+}
+
+.b-all p{
+    margin-top: 15px;
+    font-size: 17px;
+    color: #173b6c;
+    line-height: 1.5
+}
+label #slidebar_btn{
+    z-index: 1;
+    color:#149ddd;
+    position: fixed;
+    cursor: pointer;
+    font-size: 30px;
+}
+#check:checked ~ nav{
+    left:0
+}
+#check{display: none} 
+
+
+/* ======== start navbar============*/
+nav{
+    position: fixed;
+    top:0;
+    left:0px;
+    bottom:0;
+    right:0;
+    background: #040b14;
+    width:300px;
+    overflow-y: auto;
+    z-index: 9999;
+    transition: all .5s linear
+}
+nav .port{
+    margin: 20px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+nav img{
+    width:70%;
+    border-radius: 50%;
+    border: 8px solid #2c2f3f;
+}
+nav h3{
+    color: aliceblue;
+    margin:10px 0
+}
+nav .port ul{text-align: center}
+nav .port ul li{
+    display: inline-block;
+    width:35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    background: #2c2f3f;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-right: 6px;
+}
+nav .port ul li a{color: aliceblue;}
+nav .port ul li:hover{background: #149ddd}
+nav .menu{margin:20px 25px;}
+nav .menu ul li{
+    margin-bottom: 20px;  
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+nav .menu ul li a{
+    color:#a8a9b4;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+}
+nav .menu ul li a i{
+    padding:10px
+}
+nav .menu ul li:hover a , nav .menu ul li.active a {
+    color: #fff;
+    
+}
+nav .menu ul li:hover i , nav .menu ul li.active i
+{color:#149ddd; }
+/*======= end navbar===========*/
+
+/*=========== start header======*/
+header{
+    background-image: url(../img/IMG-20181128-WA0235.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 600px;
+    background-attachment: fixed;
+    position: relative;
+}
+header .background{
+    height:600px;
+    background: #00000075;
+}
+header h1{
+    color: #fff;
+    position: relative;
+    top: 250px;
+    text-align: center;
+    right: 135px;
+    font-size: 50px;
+}
+header span{
+    font-weight: 400px;
+    font-size: 35px
+}
+header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
+/*======= end header============*/
+/*============= start about=============*/
+.all{
+    padding:30px 0 0 315px;
+}
+.about{margin-bottom: 5%}
+.about .about-me{margin-top: 33px}
+.about img{width:100%}
+.about .secend h4{
+    color: #173b6c;
+    font-size: 28px;
+    margin-top: 24px;
+}
+.about .secend p{
+    font-style: italic
+}
+.about .secend ul li{margin-bottom: 10px}
+.about .secend ul li i{color: #149ddd;margin-right: 10px;}
+.about .secend ul li span:nth-of-type(1){font-weight: bold}
+.about .secend .last{font-style: normal;margin-top: 20px;}
+/*===============end about==============*/
+/*============= strat fact==============*/
+.fact {margin: 20px 0}
+.fact .facts{
+    margin: 5% 0;
+}
+.fact .facts >div i{
+       font-size: 43px;
+    margin-top: 10px;
+    color: #149ddd
+}
+.fact .facts >div h3{
+    color: #000;
+    font-weight: 700;
+    font-size: 33px;
+}
+.fact .facts >div h6{color: #173b6c;margin-bottom: 3px}
+.fact .facts >div span{color: #173b6c}
+/*============= end fact=================*/
+/*============== start skills====================*/
+.skill , .Portfolio , .test{
+    background: #f5f8fd;
+     padding:30px 0 22px 315px;
+}
+.skill .progres .pro{
+    height:50px;
+    display: block;
+    background: none;
+}
+.skill .progres .pro span:nth-of-type(1){float:left}
+.skill .progres .pro span:nth-of-type(2){float:right}
+.skill .progres .pro .pro-bar{background: #dce8f8;}
+.skill .progres .pro .bar{
+    background:#149ddd;
+    height:10px;
+    transition: .9s;
+    width:0;
+}
+/*=============end skills================*/
+/*============== start resume===========*/
+.resume{margin-bottom: 5%}
+.resume h3{
+    margin-bottom: 12px;
+    color: #000;
+    margin-top: 10px;
+}
+.resume .resume-title{
+    border-left: 2px solid #1f5297;
+    position: relative;
+    padding: 0 0 10px 12px;
+}
+.resume .resume-title:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 2px solid #1f5297;
+    border-radius: 50%;
+}
+.resume .resume-title h5{font-size: 19px;}
+.resume .resume-title p{font-style: italic;color: #555;}
+.resume .resume-title .spical span{
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 17px;
+    color:#444;
+}
+.resume .resume-title .spical span:before{
+    content: '';
+    width:8px;
+    height:8px;
+    background: #1f5297;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    border-radius: 50%;
+}
+.resume .resume-title h6{
+    background: #e4edf9;
+    display: inline-block;
+    padding: 6px 15px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #666
+}
+.resume .resume-title span{
+        color: #444;
+    font-size: 17px;
+    display: block;
+}
+/*=============== end resume=================*/
+/*============ start portifolio================*/
+
+.Portfolio ul li{
+        display: inline-block;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    font-weight: 600
+}
+.Portfolio ul li:hover{color: #149ddd}
+.Portfolio img{
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    transition: all 1.5s ease-in-out;
+}
+.portfolio .port>div:hover img{
+    transform: scale(1.2)
+}
+.Portfolio .port{
+    margin-bottom: 3%;
+}
+.port-active{
+    color: #149ddd !important
+}
+/*==================== end portifolio===========*/
+/*============= start services===============*/
+.services{margin-bottom: 5%}
+.services i{
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #149ddd;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    border:1px solid #149ddd;
+    transition: all .5s ease-in-out
+}
+.services .one{margin-top: 30px}
+.services p{font-size: 15px;}
+.services h4{font-size: 21px;}
+.services .colum{
+    transition: all .5s ease-in-out;
+    cursor: pointer
+}
+.services .colum:hover i{
+    background: #fff;
+    border:1px solid #149ddd;
+    color: #149ddd
+}
+/*===================end services===============*/
+/*================ start test====================*/
+.test{padding-bottom: 20px}
+.test .item >div:nth-of-type(1){
+        background: #fff;
+    padding: 20px 25px;
+    position: relative;
+    box-shadow: -4px 7px 9px 1px #0000001c;
+}
+.test .item >div i{
+     color: #c3e8fa;
+        font-size: 20px;
+    margin-right: 10px;
+}
+.test .item >div i:nth-of-type(2){margin-left: 10px}
+.test .item >div span{
+    font-size: 15px;
+    font-style: italic;
+}
+.test .item >div:nth-of-type(1):after{
+    content: "";
+    position: absolute;
+    border: 20px solid #fff;
+    border-color:#fff transparent transparent  transparent;
+    bottom: -39px;
+    left: calc(50% - 20px);
+}
+.test .item >div:nth-of-type(2){text-align: center;margin-top: 30px}
+.test .item >div img{
+    width:90px;
+    height:90px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.test .item >div h3{
+    font-size: 21px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    color: #000;
+}
+.test .item >div p{color:#777}
+.test .owl-theme .owl-dots .owl-dot.active{
+    color: #f00;
+} 
+/*=============== end test====================*/
+/*=============start contact=============*/
+.contact{margin-bottom: 5%}
+.contact .contact-us{margin-top: 5%;}
+.contact i{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #dff3fc;
+    color: #149ddd;
+    border-radius: 50%;
+}
+.contact .end{margin-bottom: 20px}
+.contact .first{
+    box-shadow: 2px 2px 5px  #00000036;
+    padding: 25px;
+    height: 450px;
+}
+.contact .first label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #555
+}
+.contact .first input, .contact .first textarea{
+    width:100%;
+    border-radius: 20px;
+    outline: none;
+    border:1px solid #ccc;
+    padding-left: 10px
+}
+.contact .first input{
+    height: 45px;
+    margin-bottom: 10px;
+}
+.contact .first textarea{ 
+    height: 100px;
+}
+.contact .button{
+    text-align: center;
+    margin-top: 20px;
+}
+.contact .button button{
+        padding: 10px 50px;
+    border: 0;
+    background: #149ddd;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.contact .contact-us .gg{
+        padding-top: 13%
+}
+.contact .text{margin-bottom: 30px}
+/*===============end contact=========*/
+
+/*============ start media query=============*/
+@media(max-width:575px){
+    .fact .facts ,.services .one{
+        text-align: center;
+    }
+    .fact .facts > div , .services .one >div{
+        margin-bottom: 20px
+    }
+    .contact .last>div >div{
+        width:none !important
+    }
+    .contact .first{
+        height: 520px;
+        margin-bottom: 35px;
+    }
+}
+
+
+@media (max-width:922px){
+    .all, .skill , .Portfolio , .test{
+       padding: 0 !important;
+    }
+    header h1{
+        right: 4px;
+    }
+    header .fa-bars{
+        display: block;
+        right:21px; 
+    } 
+    .b-all{
+        margin-top: 3%;
+    }
+    .b-all hr{
+        width:11%;
+    }
+    .Portfolio img{
+        margin-bottom: 20px
+    }
+    nav{
+        left:-300px;
+    } 
+    header nav {
+        display: none;
+    }
+    .contact .first{
+        height: 520px;
+        margin-bottom: 35px;
+    }
+}
+
