@@ -452,7 +452,7 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 }
 .contact .end{margin-bottom: 20px}
 .contact .first{
-    box-shadow:2px 1px 5px #ccc
+    box-shadow:2px 1px 5px #ccc;
     padding: 25px;
     height: 450px;
 }
@@ -501,9 +501,6 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
     }
     .fact .facts > div , .services .one >div{
         margin-bottom: 20px
-    }
-    .contact .last>div >div{
-        width:none !important
     }
     .contact .first{
         height: 520px;
