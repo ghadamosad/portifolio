@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +5,7 @@
         <title>Portifolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="shortcut icon" href="img/Capture-removebg-preview.png">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel=stylesheet href="css/css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/css/owl.theme.default.min.css">
@@ -13,6 +13,9 @@
         <link rel =stylesheet href="css/style.css">
     </head>
     <body>
+        <div class="loader">
+        <div class="lds-hourglass"></div>
+        </div>
         <input type="checkbox" id="check">
         <!-- start navbar-->
         <nav>
@@ -64,7 +67,7 @@
                     <div class="about-me">
                         <div class="row">
                             <div class="col-md-4 col-xs-12 animate__animated wow animate__bounceInRight">
-                                <img src="img/IMG-20181128-WA0243.jpg">
+                                <img src="img/checking-plan-all-day.png">
                             </div>
                             <div class="col-md-8 col-xs-12 secend animate__animated wow animate__bounceInLeft data-wow-delay="5s"">
                                 <h4>UI/UX Designer &amp; Web Developer.</h4>
@@ -222,7 +225,7 @@
                             </div>
                             <div class="col-md-6 animate__lightSpeedInRight animate__animated wow">
                                 <div class="pro">
-                                    <span>PHP</span>
+                                    <span>jQuery</span>
                                     <span>80%</span>
                                     <div class="clearfix"></div>
                                     <div class="pro-bar">
@@ -230,15 +233,15 @@
                                     </div>
                                 </div>
                                 <div class="pro">
-                                    <span>WORDPRESS</span>
-                                    <span>90%</span>
+                                    <span>Bootstrap</span>
+                                    <span>95%</span>
                                     <div class="clearfix"></div>
                                     <div class="pro-bar">
                                         <div class="bar" data-progress="90"></div>
                                     </div>
                                 </div>
                                 <div class="pro">
-                                    <span>PhotoShop</span>
+                                    <span>Adobe XD</span>
                                     <span>95%</span>
                                     <div class="clearfix"></div>
                                     <div class="pro-bar">
@@ -337,31 +340,77 @@
                 </div> 
                 <div class="row port">
                     <div class="col-md-4 app">
-                        <img src="img/portfolio-1.jpg">
+                        <div class="port-file">
+                            <img src="img/portfolio-1.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 cade">
-                        <img src="img/portfolio-2.jpg">
+                        <div class="port-file">
+                            <img src="img/portfolio-2.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 web">
-                        <img src="img/portfolio-3.jpg">
+                        <div class="port-file">
+                            <img src="img/portfolio-3.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 cade">
+                        <div class="port-file">
                         <img src="img/portfolio-4.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="col-md-4 web">
+                        <div class="port-file">
                         <img src="img/portfolio-8.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 app">
+                        <div class="port-file">
                         <img src="img/portfolio-9.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 app">
+                        <div class="port-file">
                         <img src="img/portfolio-5.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 cade">
+                        <div class="port-file">
                         <img src="img/portfolio-6.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 cade">
+                        <div class="port-file">
                         <img src="img/portfolio-7.jpg">
+                            <div class="caption">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -619,6 +668,7 @@
         <script>
             new WOW().init();
         </script>
+        <script src="js/js/jquery.nicescroll.min.js"></script>
         <script src="js/blaug.js"></script>
     </body>
     

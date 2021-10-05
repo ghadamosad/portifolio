@@ -72,20 +72,22 @@ $(document).ready(function(){
         
     });
     
+    $('.fas fa-bars').click(function(){
+       $(this).toggleClass('fa-times'); 
+    });
     
-  /*  $('.btn1').click(function(){
+    
+  $("body,nav").niceScroll({
+    cursorcolor:"#149ddd",
+    cursorwidth:"12px",       
+    cursoropacitymin:0.4,
+    cursorborder:'none',
+  });
+    
+    $(window).on("load",function(){
        
-        $(this).fadeOut(500);
-        $(this).parent().find('nav').animate({left:0},500);
-        $(this).next().animate({display:'block'},500);
-    }); */
-    
-    
-    
-    
-    
-   /* new WOW().init();*/
-    
+        $('.loader').fadeOut('slow');
+    });
     
     
    

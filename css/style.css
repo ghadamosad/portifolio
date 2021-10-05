@@ -27,8 +27,51 @@ label #slidebar_btn{
     left:0
 }
 #check{display: none} 
-
-
+/*start loader*/
+.loader{
+    background: linear-gradient(#3D56B2, #14279b,#150050);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999
+}
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fed;
+  border-color: #fed transparent #fed transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+/*end loader*/
 /* ======== start navbar============*/
 nav{
     position: fixed;
@@ -39,7 +82,7 @@ nav{
     background: #040b14;
     width:300px;
     overflow-y: auto;
-    z-index: 9999;
+    z-index: 50;
     transition: all .5s linear
 }
 nav .port{
@@ -74,13 +117,13 @@ nav .port ul li:hover{background: #149ddd}
 nav .menu{margin:20px 25px;}
 nav .menu ul li{
     margin-bottom: 20px;  
-    cursor: pointer;
     transition: all .3s ease-in-out;
 }
 nav .menu ul li a{
     color:#a8a9b4;
     transition: all .3s ease-in-out;
     text-decoration: none;
+    padding: 0 100px 0 0;
 }
 nav .menu ul li a i{
     padding:10px
@@ -95,7 +138,7 @@ nav .menu ul li:hover i , nav .menu ul li.active i
 
 /*=========== start header======*/
 header{
-    background-image: url(../img/IMG-20181128-WA0235.jpg);
+    background-image: url(../img/flat-lay-photo-office-desk-with-laptop-copy-space-background.png);
     background-position: top;
     background-size: cover;
     height: 600px;
@@ -126,7 +169,7 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 }
 .about{margin-bottom: 5%}
 .about .about-me{margin-top: 33px}
-.about img{width:100%}
+.about img{width:100%;border-radius: 10px;}
 .about .secend h4{
     color: #173b6c;
     font-size: 28px;
@@ -237,6 +280,7 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 /*=============== end resume=================*/
 /*============ start portifolio================*/
 
+.Portfolio{}
 .Portfolio ul li{
         display: inline-block;
     background: #fff;
@@ -247,20 +291,76 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
     font-weight: 600
 }
 .Portfolio ul li:hover{color: #149ddd}
-.Portfolio img{
+.Portfolio .port-file{
+    overflow: hidden;
+    
+    margin-bottom: 20px;
+}
+.Portfolio .port-file img{
     width: 100%;
     position: relative;
-    margin-bottom: 20px;
-    transition: all 1.5s ease-in-out;
-}
-.portfolio .port>div:hover img{
-    transform: scale(1.2)
+    transition: .5s
 }
 .Portfolio .port{
     margin-bottom: 3%;
 }
 .port-active{
     color: #149ddd !important
+}
+.port .port-file:hover img{
+    transform: rotate(-10deg) scale(1.5);
+    opacity: 0.5
+}
+.port .port-file:hover i{display: block}
+.port .caption{
+    position: absolute;
+    top:22px;
+    left:40px;
+    right: 40px;
+    bottom: 40px;
+}
+.port .caption:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: scale(0,1)
+}
+.port-file:hover .caption:before{
+    transform: scale(1,1)
+}
+.port .caption:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: scale(1,0)
+}
+.port-file:hover .caption:after{
+    transform: scale(1,1)
+}
+.port .caption i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    color: #149ddd;
+    z-index: 10
 }
 /*==================== end portifolio===========*/
 /*============= start services===============*/
@@ -293,10 +393,11 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 /*================ start test====================*/
 .test{padding-bottom: 20px}
 .test .item >div:nth-of-type(1){
-        background: #fff;
+    background: #fff;
     padding: 20px 25px;
     position: relative;
-    box-shadow: -4px 7px 9px 1px #0000001c;
+        border-radius: 20px;
+/*    box-shadow: 2px 1px 5px #ccc*/
 }
 .test .item >div i{
      color: #c3e8fa;
@@ -333,6 +434,9 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 .test .owl-theme .owl-dots .owl-dot.active{
     color: #f00;
 } 
+.owl-theme .owl-dots .owl-dot.active span{
+    background:#149ddd 
+}
 /*=============== end test====================*/
 /*=============start contact=============*/
 .contact{margin-bottom: 5%}
@@ -348,7 +452,7 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 }
 .contact .end{margin-bottom: 20px}
 .contact .first{
-    box-shadow: 2px 2px 5px  #00000036;
+    box-shadow:2px 1px 5px #ccc
     padding: 25px;
     height: 450px;
 }
@@ -409,8 +513,11 @@ header span:nth-of-type(2){border-bottom: 5px solid #149ddd}
 
 
 @media (max-width:922px){
-    .all, .skill , .Portfolio , .test{
+    .skill , .Portfolio , .test{
        padding: 0 !important;
+    }
+    .all{
+        padding:10px
     }
     header h1{
         right: 4px;
